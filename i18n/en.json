@@ -1,5 +1,18 @@
 {
   "home": {
     "title": "Hello world!"
+  },
+
+  "slogan": {
+    "1": "Code that shapes minds,",
+    "2": "not just machines"
+  },
+  "header": {
+    "home": "Home",
+    "tutorials": "Tutorials",
+    "community": "Community",
+    "our mission": "Our Mission",
+    "work with us": "Work with us",
+    "donate": "Donate"
   }
 }

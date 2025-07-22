@@ -1,13 +1,10 @@
-
 import { Main } from "@/components/main";
-import { getTranslations } from "next-intl/server";
-import Image from "next/image";
+import { Home } from "@/features/home/components/home";
 
-export default async function Home() {
-  const t = await getTranslations("home")
+export default async function HomePage() {
   return (
     <Main>
-      {t("title")}
+      <Home />
     </Main>
   );
 }

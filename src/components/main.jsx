@@ -1,5 +1,5 @@
 import { cn } from "@/lib/utils";
-import { Headbar } from "./ui/headbar";
+import { Headbar } from "../features/header/components/headbar";
 
 export function Main({ children, className }) {
   return (
@@ -7,7 +7,7 @@ export function Main({ children, className }) {
       <Headbar />
       <main
         className={cn(
-          "mx-auto mb-16 w-full max-w-5xl flex-1 px-4 py-24 sm:px-8",
+          "mx-auto mb-16 w-full max-w-6xl flex-1 px-4 py-24 sm:px-8",
           className
         )}
       >

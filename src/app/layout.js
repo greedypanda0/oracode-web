@@ -19,7 +19,7 @@ export default async function RootLayout({ children }) {
         className={`${geistSans.className} ${geistMono.className} antialiased`}
       >
         <IntlProvider locale={locale} messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="bluewhite" enableSystem>
             {children}
           </ThemeProvider>
         </IntlProvider>

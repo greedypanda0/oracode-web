@@ -1,37 +1,28 @@
 "use client";
-
-import { motion } from "framer-motion";
-import { useTranslations } from "next-intl";
 import Image from "next/image";
+import { useTranslations } from "next-intl";
 
 export function Hero() {
-  const slogan = useTranslations("slogan");
-  const lines = [slogan("1"), slogan("2")];
+  const t = useTranslations("hero");
 
   return (
-    <div className="w-full flex flex-row py-16">
-      <div className="flex flex-col w-full md:w-1/2 justify-center items-center">
-      <div>
-        {lines.map((line, idx) => (
-          <motion.h1
-            key={idx}
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.4, delay: idx * 0.2, ease: "easeOut" }}
-            className="text-xl md:text-3xl italic text-[var(--primary)] font-extrabold"
-          >
-            {line}
-          </motion.h1>
-        ))}
-        </div>
+    <div className="w-full flex flex-col md:flex-row px-4 py-8 gap-6">
+      {/* Left Section */}
+      <div className="flex flex-col justify-center w-full md:w-1/2 space-y-4">
+        <Image src="/oracode.png" alt="oracode logo" width={200} height={100} />
+        <h2 className="text-2xl font-medium text-foreground">{t("slogan")}</h2>
+        <p className="text-md leading-relaxed text-muted">{t("description")}</p>
       </div>
-      <div className="hidden md:w-1/2 md:flex justify-center items-center h-full">
-      <motion.div
-      animate={{ y: [0, -5, 0] }}
-      transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-      > 
-      <Image src="/panda.png" alt="panda logo" width={300} height={300} />
-      </motion.div>   
+
+      {/* Right Section (Image Placeholder) */}
+      <div className="hidden md:flex w-full md:w-1/2 justify-center items-center">
+        <Image
+          src="/codeimage_preview_lite.png"
+          alt="Oracode app illustration"
+          width={500}
+          height={500}
+          className="rounded-xl shadow-md"
+        />
       </div>
     </div>
   );

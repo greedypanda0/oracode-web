@@ -7,16 +7,30 @@ import {
   SelectItem,
 } from "@/components/ui/select";
 import { Menu } from "lucide-react";
-import { HeadbarNav } from "./headbar-nav";
+import { useRouter, usePathname } from "next/navigation";
+
+const pages = [
+  { name: "tutorials", href: "/tutorials" },
+  { name: "community", href: "/community" },
+  { name: "work with us", href: "/work" },
+  { name: "donate", href: "/donate" },
+];
 
 export function HeadbarMenu() {
+  const router = useRouter();
+  const pathname = usePathname();
+
   return (
-    <Select onValueChange={() => {}}>
-      <SelectTrigger>
-        <Menu className="h-4 w-4" />
+    <Select onValueChange={(val) => router.push(val)} defaultValue={pathname}>
+      <SelectTrigger className="text-foreground border-none shadow-none">
+        <Menu className="h-4 w-4" color="#fff" />
       </SelectTrigger>
       <SelectContent>
-        <HeadbarNav className="flex-col items-start p-2 flex" />
+        {pages.map((item, key) => (
+          <SelectItem value={item.href} key={key}>
+            {item.name}
+          </SelectItem>
+        ))}
       </SelectContent>
     </Select>
   );

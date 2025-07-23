@@ -14,10 +14,6 @@ const pages = [
     href: "/",
   },
   {
-    name: "our mission",
-    href: "/",
-  },
-  {
     name: "work with us",
     href: "/",
   },
@@ -31,12 +27,12 @@ export function HeadbarNav({ className }) {
   const t = useTranslations("header");
 
   return (
-    <nav className={cn("hidden md:flex items-center gap-4", className)}>
+    <nav className={cn("hidden md:flex items-center gap-8", className)}>
       {pages.map((page, idx) => (
         <Link
           key={idx}
           href={page.href}
-          className="text-sm text-[var(--foreground)] border-b-2 border-transparent transition-all duration-300 font-semibold hover:animate-bounce"
+          className={cn("text-sm text-[var(--foreground)] border-b-2 border-transparent transition-all duration-300 font-semibold hover:animate-bounce", page.name === "donate" && "text-accent font-extrabold")}
           title={page.name}
         >
           {t(page.name)}

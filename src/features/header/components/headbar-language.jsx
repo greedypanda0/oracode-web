@@ -34,8 +34,8 @@ export function LanguageChanger() {
 
   return (
     <Select defaultValue={locale} onValueChange={handleChange}>
-      <SelectTrigger>
-        <Globe className="h-4 w-4" />
+      <SelectTrigger icon={true} className="text-foreground border-none shadow-none">
+        {langs.find((c) => c.value === locale)?.flag || "🌐"} {locale}
       </SelectTrigger>
       <SelectContent>
         {langs.map((item, key) => (

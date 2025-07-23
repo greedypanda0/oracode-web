@@ -2,17 +2,18 @@
   "home": {
     "title": "Hello world!"
   },
-
-  "slogan": {
-    "1": "Code that shapes minds,",
-    "2": "not just machines"
+  "mission": {
+    "title": "🧭 Our Mission",
+    "description": "Empower every child, regardless of background, with the power to think, build, and choose ethically — through accessible, multilingual tech education that works anywhere, anytime."
+  },
+  "hero": {
+    "slogan": "Code that shapes minds, not just machines.",
+    "description": "Oracode is an offline-first educational mobile app designed to teach underprivileged children the fundamentals of coding, systems, and ethics — all in multiple languages."
   },
   "header": {
-    "home": "Home",
     "tutorials": "Tutorials",
     "community": "Community",
-    "our mission": "Our Mission",
-    "work with us": "Work with us",
+    "work with us": "Work With Us",
     "donate": "Donate"
   }
 }

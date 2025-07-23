@@ -5,6 +5,8 @@ import { LanguageChanger } from "./headbar-language";
 import { HeadbarNav } from "./headbar-nav";
 import Image from "next/image";
 import { HeadbarMenu } from "./headbar-menu";
+import { cn } from "@/lib/utils";
+import { montserrat } from "@/lib/fonts";
 
 export function Headbar() {
   return (
@@ -17,9 +19,9 @@ export function Headbar() {
         damping: 20,
         duration: 0.6,
       }}
-      className="fixed top-4 inset-x-0 z-40 mx-4 md:mx-auto flex h-14 max-w-6xl items-center justify-between rounded-2xl bg-[var(--primary)] backdrop-blur-md px-6 shadow-md border border-[var(--border)]"
+      className="fixed top-4 inset-x-0 z-40 mx-4 md:mx-auto flex h-14 max-w-6xl items-center justify-between backdrop-blur-md px-6"
     >
-      <div className="text-[var(--primary-foreground)] font-bold text-lg">
+      <div className={cn("text-[var(--primary-foreground)] font-bold text-lg", montserrat.className)}>
         <Link href="/">
           {/* <Image src="/ora.webp" alt="oracode pfp" width={100} height={50} /> */}
           Oracode

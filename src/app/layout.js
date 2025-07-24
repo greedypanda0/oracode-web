@@ -1,4 +1,4 @@
-import { geistMono, geistSans } from "@/lib/fonts";
+import { montserrat } from "@/lib/fonts";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { IntlProvider } from "@/components/intl-provider";
@@ -11,15 +11,17 @@ export const metadata = {
 
 export default async function RootLayout({ children }) {
   const locale = await getLocale();
-  const messages = await getMessages()
+  const messages = await getMessages();
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body
-        className={`${geistSans.className} ${geistMono.className} antialiased`}
-      >
+      <body className={`${montserrat.className} antialiased`}>
         <IntlProvider locale={locale} messages={messages}>
-          <ThemeProvider attribute="class" defaultTheme="bluewhite" enableSystem>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="bluewhite"
+            enableSystem
+          >
             {children}
           </ThemeProvider>
         </IntlProvider>

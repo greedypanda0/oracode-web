@@ -1,37 +1,46 @@
 "use client";
 
 import {
-  Select,
-  SelectTrigger,
-  SelectContent,
-  SelectItem,
-} from "@/components/ui/select";
+  DropdownMenu,
+  DropdownMenuTrigger,
+  DropdownMenuContent,
+  DropdownMenuItem,
+} from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
-import { useRouter, usePathname } from "next/navigation";
+import { useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
+import { Community } from "./headbar-community";
 
 const pages = [
   { name: "tutorials", href: "/tutorials" },
-  { name: "community", href: "/community" },
   { name: "work with us", href: "/work" },
   { name: "donate", href: "/donate" },
 ];
 
 export function HeadbarMenu() {
   const router = useRouter();
-  const pathname = usePathname();
+  const t = useTranslations("header");
 
   return (
-    <Select onValueChange={(val) => router.push(val)} defaultValue={pathname}>
-      <SelectTrigger className="text-foreground border-none shadow-none">
-        <Menu className="h-4 w-4" color="#fff" />
-      </SelectTrigger>
-      <SelectContent>
-        {pages.map((item, key) => (
-          <SelectItem value={item.href} key={key}>
-            {item.name}
-          </SelectItem>
+    <DropdownMenu>
+      <DropdownMenuTrigger className="outline-none ring-0 focus:ring-0 border-none bg-transparent p-0 m-0">
+        <Menu className="w-5 h-5 text-foreground" />
+      </DropdownMenuTrigger>
+
+      <DropdownMenuContent align="end" className="mt-2 w-40">
+        <DropdownMenuItem>
+          <Community />
+        </DropdownMenuItem>
+        {pages.map((item) => (
+          <DropdownMenuItem
+            key={item.href}
+            onClick={() => router.push(item.href)}
+            className="cursor-pointer"
+          >
+            {t(item.name)}
+          </DropdownMenuItem>
         ))}
-      </SelectContent>
-    </Select>
+      </DropdownMenuContent>
+    </DropdownMenu>
   );
 }

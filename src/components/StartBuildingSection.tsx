@@ -1,23 +1,23 @@
-import { ArrowRight, BookOpen, Code2, Rocket } from 'lucide-react';
+import { ArrowRight, PlayCircle, Puzzle, Trophy} from 'lucide-react';
 
 export default function StartBuildingSection() {
   const tutorials = [
     {
-      title: 'Web Development',
-      description: 'Learn HTML, CSS, and JavaScript through fun projects',
-      icon: Code2,
+      title: 'Code Basics',
+      description: 'Learn Programming fundamentals through interactive and visual blocks.',
+      icon: PlayCircle,
       color: 'bg-blue-500'
     },
     {
-      title: 'Game Development',
-      description: 'Create your own games with visual programming',
-      icon: Rocket,
+      title: 'Logic & Problem Solving',
+      description: 'Develop critical thinking skills with fun coding Puzzles and challenges.',
+      icon: Puzzle,
       color: 'bg-green-500'
     },
     {
-      title: 'Mobile Apps',
-      description: 'Build mobile applications that solve real problems',
-      icon: BookOpen,
+      title: 'Build & Create',
+      description: 'Apply your coding skills to create interactive projects.',
+      icon: Trophy,
       color: 'bg-purple-500'
     }
   ];

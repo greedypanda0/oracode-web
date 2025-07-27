@@ -55,6 +55,11 @@ export default function PartnersSection() {
             </div>
           ))}
         </div>
+        <div className="flex justify-center mt-5">
+          <p className="text-muted-foreground font-medium text-sm">
+            Many More
+          </p>
+        </div>
       </div>
     </section>
   );

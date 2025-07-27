@@ -2,14 +2,23 @@
 
 import {
   DropdownMenu,
-  DropdownMenuTrigger,
   DropdownMenuContent,
+  DropdownMenuGroup,
   DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuPortal,
+  DropdownMenuSeparator,
+  DropdownMenuShortcut,
+  DropdownMenuSub,
+  DropdownMenuSubContent,
+  DropdownMenuSubTrigger,
+  DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { Menu } from "lucide-react";
 import { useTranslations } from "next-intl";
 import { useRouter } from "next/navigation";
 import { Community } from "./headbar-community";
+import { Button } from "@/components/ui/button";
 
 const pages = [
   { name: "tutorials", href: "/tutorials" },
@@ -23,23 +32,19 @@ export function HeadbarMenu() {
 
   return (
     <DropdownMenu>
-      <DropdownMenuTrigger className="outline-none ring-0 focus:ring-0 border-none bg-transparent p-0 m-0">
-        <Menu className="w-5 h-5 text-foreground" />
+      <DropdownMenuTrigger asChild>
+        <Button size="icon">
+          <Menu className="w-5 h-5 text-foreground" />
+        </Button>
       </DropdownMenuTrigger>
 
-      <DropdownMenuContent align="end" className="mt-2 w-40">
-        <DropdownMenuItem>
-          <Community />
-        </DropdownMenuItem>
-        {pages.map((item) => (
-          <DropdownMenuItem
-            key={item.href}
-            onClick={() => router.push(item.href)}
-            className="cursor-pointer"
-          >
-            {t(item.name)}
-          </DropdownMenuItem>
-        ))}
+      <DropdownMenuContent align="end" className="mt-2 w-full">
+        <DropdownMenuItem>nruh</DropdownMenuItem>
+        <DropdownMenuItem>Community</DropdownMenuItem>
+        <DropdownMenuItem className="pl-5">nruh</DropdownMenuItem>
+        <DropdownMenuItem className="pl-5">nruh</DropdownMenuItem>
+        <DropdownMenuItem className="pl-5">nruh</DropdownMenuItem>
+        <DropdownMenuItem>nruh</DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
   );

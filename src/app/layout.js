@@ -19,7 +19,7 @@ export default async function RootLayout({ children }) {
         <IntlProvider locale={locale} messages={messages}>
           <ThemeProvider
             attribute="class"
-            defaultTheme="bluewhite"
+            defaultTheme="dark"
             enableSystem
           >
             {children}

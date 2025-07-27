@@ -9,16 +9,16 @@ import {
   DropdownMenuSeparator,
 } from "@/components/ui/dropdown-menu";
 
-import { Globe, MessageCircle, Github, LifeBuoy } from "lucide-react";
+import { Globe, MessageCircle, Github, LifeBuoy, ChevronDown } from "lucide-react";
 import Link from "next/link";
 
 export function Community() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="link" className="text-foreground font-semibold p-0">
-          Community
-        </Button>
+        <p className="text-sm text-foreground font-semibold p-0 hover:text-primary flex flex-row gap-2 justify-center items-center">
+          Community <ChevronDown size={15} />
+        </p>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" className="w-56">
         <DropdownMenuItem asChild>

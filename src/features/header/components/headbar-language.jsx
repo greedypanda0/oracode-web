@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -19,6 +20,7 @@ const langs = [
 export function LanguageChanger() {
   const locale = useLocale();
   const router = useRouter();
+  const defLanguage = langs.find((e) => e.value === locale);
 
   const handleChange = (value) => {
     Cookies.set("NEXT_LOCALE", value);
@@ -28,9 +30,7 @@ export function LanguageChanger() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <button className="appearance-none p-0 m-0 border-none bg-transparent focus:outline-none">
-          <Globe className="w-5 h-5 text-foreground" />
-        </button>
+        <Button size="icon">{defLanguage.flag}</Button>
       </DropdownMenuTrigger>
 
       <DropdownMenuContent align="end">

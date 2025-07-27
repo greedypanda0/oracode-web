@@ -7,7 +7,7 @@ export function Main({ children, className }) {
       <Headbar />
       <main
         className={cn(
-          "mx-auto mb-16 w-full max-w-6xl flex-1 px-4 py-24 sm:px-8",
+          "mx-auto w-full max-w-7xl flex-1 px-4 sm:px-8",
           className
         )}
       >

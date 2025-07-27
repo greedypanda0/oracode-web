@@ -1,17 +1,26 @@
 "use client";
 import Image from "next/image";
 import { useTranslations } from "next-intl";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 export function Hero() {
   const t = useTranslations("hero");
 
   return (
-    <section className="w-full flex flex-col md:flex-row px-4 py-8 gap-6">
+    <section className="w-full flex flex-col md:flex-row px-4 py-8 gap-6 h-screen">
       {/* Left Section */}
       <div className="flex flex-col justify-center w-full md:w-1/2 space-y-4">
         <Image src="/oracode.png" alt="oracode logo" width={200} height={100} />
-        <h2 className="text-2xl font-medium text-foreground">{t("slogan")}</h2>
-        <p className="text-md leading-relaxed text-secondary">{t("description")}</p>
+        <h2 className="text-xl md:text-3xl font-bold text-foreground">
+          {t("slogan")}
+        </h2>
+        <p className="text-sm md:text-xl font-semibold leading-relaxed text-primary">
+          {t("description")}
+        </p>
+        <Button className="md:w-fit" size="lg">
+          <Download /> Download App
+        </Button>
       </div>
 
       {/* Right Section (Image Placeholder) */}

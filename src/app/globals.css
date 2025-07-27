@@ -79,93 +79,33 @@
 }
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.205 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.205 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.922 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.704 0.191 22.216);
-  --border: oklch(1 0 0 / 10%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.556 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(1 0 0 / 10%);
-  --sidebar-ring: oklch(0.556 0 0);
-}
+  --background: oklch(12% 0.02 270);
+  --foreground: oklch(98% 0.01 250);
 
-.bluewhite {
-  /* 🌌 Core Background + Foreground */
-  --background: oklch(56.3% 0.24 260.8); /* soft blue */
-  --foreground: oklch(98% 0.01 260); /* very light blue (almost white) */
+  --card: oklch(23.744% 0.08075 272.689);
+  --card-foreground: oklch(98% 0.01 250);
 
-  /* 🪪 Card UI Elements */
-  --card: oklch(47% 0.08 260); /* desaturated blue card */
-  --card-foreground: oklch(85% 0.03 260); /* readable but not glaring */
+  --popover: oklch(30.186% 0.15481 268.102);
+  --popover-foreground: oklch(98% 0.01 250);
 
-  /* 🫧 Popover */
-  --popover: oklch(38% 0.20 262); /* slightly deeper blue */
-  --popover-foreground: oklch(96% 0.005 260); /* whiteish */
+  --primary: oklch(53% 0.16 270);
+  --primary-foreground: oklch(98% 0.01 250);
 
-  /* ✅ Primary: GREEN */
-  --primary: oklch(65% 0.18 140); /* vivid, slightly warm green */
-  --primary-foreground: oklch(98% 0.01 140); /* white on green */
+  --secondary: oklch(20% 0.04 270);
+  --secondary-foreground: oklch(98% 0.01 250);
 
-  /* 🔵 Secondary: Supporting blue */
-  --secondary: oklch(78% 0.18 240); /* cool light blue */
-  --secondary-foreground: oklch(20% 0.03 260); /* dark text on blue */
+  --muted: oklch(20% 0.02 270);
+  --muted-foreground: oklch(65% 0.02 250);
 
-  /* 💜 Accent: Purplish */
-  --accent: oklch(72% 0.2 315); /* pinkish purple */
-  --accent-foreground: oklch(18% 0.02 300); /* readable dark text */
+  --accent: oklch(20% 0.04 270);
+  --accent-foreground: oklch(98% 0.01 250);
 
-  /* 🧊 Muted: Low contrast content */
-  --muted: oklch(33% 0.07 260); /* low-sat blue-gray */
-  --muted-foreground: oklch(62% 0.04 260); /* subtle but readable */
+  --destructive: oklch(40% 0.12 30);
+  --destructive-foreground: oklch(98% 0.01 250);
 
-  /* ☠️ Destructive */
-  --destructive: oklch(55% 0.22 25); /* alert red-orange */
-  --destructive-foreground: oklch(98% 0.005 25); /* whiteish text */
-
-  /* 🧱 Borders & UI */
-  --border: oklch(50% 0.05 260 / 0.5);
-  --input: oklch(45% 0.1 260);
-  --ring: oklch(68% 0.15 260); /* ring glow */
-
-  /* 📊 Charts */
-  --chart-1: oklch(65% 0.18 140); /* green (primary) */
-  --chart-2: oklch(75% 0.15 315); /* pink-purple (accent) */
-  --chart-3: oklch(85% 0.14 200); /* cyan */
-  --chart-4: oklch(72% 0.18 310); /* violet */
-  --chart-5: oklch(66% 0.22 230); /* blue-purple */
-
-  /* 📚 Sidebar */
-  --sidebar: oklch(58% 0.12 260); /* slightly darker than base */
-  --sidebar-foreground: oklch(20% 0.02 260); /* dark blue text */
-  --sidebar-primary: oklch(65% 0.18 140); /* green */
-  --sidebar-primary-foreground: oklch(98% 0.01 140);
-  --sidebar-accent: oklch(78% 0.18 315); /* pinkish purple */
-  --sidebar-accent-foreground: oklch(20% 0.02 260);
-  --sidebar-border: oklch(20% 0.02 260 / 10%);
-  --sidebar-ring: oklch(38% 0.05 260);
+  --border: oklch(20% 0.04 270);
+  --input: oklch(20% 0.04 270);
+  --ring: oklch(53% 0.16 270);
 }
 
 
@@ -180,7 +120,11 @@
 
 @layer utilities {
   .bg-circle-primary {
-    background-image: radial-gradient(circle at center, theme(colors.blue.400), theme(colors.yellow.300));
+    background-image: radial-gradient(
+      circle at center,
+      theme(colors.blue.400),
+      theme(colors.yellow.300)
+    );
   }
 }
 

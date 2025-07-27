@@ -6,6 +6,8 @@ import { HeadbarNav } from "./headbar-nav";
 import Image from "next/image";
 import { HeadbarMenu } from "./headbar-menu";
 import { cn } from "@/lib/utils";
+import { Button } from "@/components/ui/button";
+import { Download } from "lucide-react";
 
 export function Headbar() {
   return (
@@ -18,7 +20,7 @@ export function Headbar() {
         damping: 20,
         duration: 0.6,
       }}
-      className="fixed top-4 inset-x-0 z-40 mx-4 md:mx-auto flex h-14 max-w-6xl items-center justify-between backdrop-blur-md px-6"
+      className="fixed top-4 inset-x-0 z-40 mx-4 md:mx-auto flex h-14 max-w-7xl items-center justify-between backdrop-blur-md px-6"
     >
       {/* Title  */}
       <div className={cn("text-[var(--primary-foreground)] font-bold text-lg")}>
@@ -34,9 +36,13 @@ export function Headbar() {
       </div>
 
       {/* Buttons  */}
-      <div className="flex flex-row items-center gap-6">
+      <div className="flex flex-row items-center gap-2">
         <LanguageChanger />
         <HeadbarMenu />
+        <Button className="hidden md:flex">
+          <Download /> Download
+        </Button>
+        <Button className="hidden md:flex">Sign In</Button>
       </div>
     </motion.header>
   );

@@ -9,9 +9,10 @@ import {
   Phone
 } from 'lucide-react';
 
+import Link from 'next/link'
 export default function Footer() {
   const quickLinks = [
-    { name: 'Home', href: '#' },
+    { name: 'Home', href: '/' },
     { name: 'Tutorials', href: '#tutorials' },
     { name: 'Community', href: '#community' },
     { name: 'Projects', href: '#projects' }
@@ -28,7 +29,7 @@ export default function Footer() {
     { name: 'Our Vision', href: '#' },
     { name: 'Work With Us', href: '#' },
     { name: 'Contact Us', href: '#' },
-    { name: 'Donate', href: '#' }
+    { name: 'Donate', href: '/donate' }
   ];
 
   const legalLinks = [
@@ -96,12 +97,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {quickLinks.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -113,12 +114,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {communityLinks.map((link, index) => (
                 <li key={index}>
-                  <a
+                 <Link
                     href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -130,12 +131,12 @@ export default function Footer() {
             <ul className="space-y-3">
               {aboutLinks.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
                     className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
               <li className="pt-2 border-t">
@@ -143,12 +144,12 @@ export default function Footer() {
               </li>
               {legalLinks.map((link, index) => (
                 <li key={index}>
-                  <a
+                  <Link
                     href={link.href}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                    className="text-muted-foreground hover:text-primary transition-colors"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>

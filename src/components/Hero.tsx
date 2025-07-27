@@ -53,29 +53,42 @@ export default function Hero() {
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left side - Content */}
           <div className="space-y-8 slide-in">
-            <div className="space-y-4">
+            <div className="space-y-6">
               <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold text-foreground leading-tight">
                 Ora<span className="text-primary">code</span>
               </h1>
               <p className="text-xl sm:text-2xl text-muted-foreground font-medium">
-                code that shapes minds, not just machines
+                Code That Shapes Minds, Not Just Machines
               </p>
+              
+              {/* About Us Section */}
+              <div className="space-y-3 pt-4">
+                <p className="text-lg text-foreground/80 leading-relaxed">
+                  We're on a mission to democratize coding education for children worldwide. 
+                  Through interactive tutorials, gamified learning experiences, and a supportive 
+                  community.
+                </p>
+                <p className="text-lg text-foreground/80 leading-relaxed">
+                  Join thousands of young coders who are already building their future, 
+                  one line of code at a time.
+                </p>
+              </div>
             </div>
 
-            <div className="flex flex-col sm:flex-row gap-4">
-              <button className="flex items-center justify-center px-8 py-4 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all transform hover:scale-105 font-semibold text-lg shadow-lg">
+            <div className="flex flex-wrap gap-4">
+              <button className="flex items-center justify-center px-6 py-3 bg-primary text-primary-foreground rounded-xl hover:bg-primary/90 transition-all transform hover:scale-105 font-semibold shadow-lg">
                 <Play className="h-5 w-5 mr-2" />
                 Start Learning
               </button>
               
-              <button className="flex items-center justify-center px-8 py-4 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-primary-foreground transition-all transform hover:scale-105 font-semibold text-lg">
+              <button className="flex items-center justify-center px-6 py-3 border-2 border-primary text-primary rounded-xl hover:bg-primary hover:text-primary-foreground transition-all transform hover:scale-105 font-semibold">
                 <Upload className="h-5 w-5 mr-2" />
-                Submit Your Project
+                Submit Project
               </button>
               
-              <button className="flex items-center justify-center px-8 py-4 bg-secondary text-secondary-foreground rounded-xl hover:bg-secondary/80 transition-all transform hover:scale-105 font-semibold text-lg shadow-lg">
+              <button className="flex items-center justify-center px-6 py-3 bg-secondary text-secondary-foreground rounded-xl hover:bg-secondary/80 transition-all transform hover:scale-105 font-semibold shadow-lg">
                 <Download className="h-5 w-5 mr-2" />
-                Download App
+                Get App
               </button>
             </div>
           </div>

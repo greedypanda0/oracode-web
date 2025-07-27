@@ -8,7 +8,7 @@ export function Home() {
   const t = useTranslations("home");
 
   return (
-    <div className="w-full flex flex-col">
+    <div className="w-full min-h-screen flex flex-col space-y-16 overflow-y-auto">
       <Hero />
       <Mission />
       <Reviews />

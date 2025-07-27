@@ -4,11 +4,11 @@ export function Mission() {
   return (
     <section
       id="mission"
-      className="w-full flex flex-col md:flex-row px-4 gap-6 h-[50vh] justify-center items-center"
+      className="w-full flex flex-col-reverse md:flex-row px-2 md:px-4 gap-6 md:h-[50vh] justify-center items-center"
     >
       {/* Left section  */}
-      <div className="w-1/2 flex flex-col gap-2">
-        <h1 className="text-xl md:text-3xl font-bold">
+      <div className="w-full md:w-1/2 flex flex-col gap-2">
+        <h1 className="text-md md:text-3xl font-bold">
           Empowering the Next Generation of Coders
         </h1>
         <p className="text-sm md:text-xl font-semibold text-primary leading-relaxed">
@@ -20,7 +20,7 @@ export function Mission() {
       </div>
 
       {/* Right section  */}
-      <div className="w-1/2 flex justify-center items-center flex-col gap-2">
+      <div className="w-full md:w-1/2 flex justify-center items-center flex-col gap-2">
         <div className="bg-primary p-6 rounded-full">
           <Code size={50} />
         </div>

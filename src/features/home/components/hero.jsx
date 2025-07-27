@@ -8,7 +8,7 @@ export function Hero() {
   const t = useTranslations("hero");
 
   return (
-    <section className="w-full flex flex-col md:flex-row px-4 py-8 gap-6 h-screen">
+    <section className="w-full flex flex-col md:flex-row px-2 md:px-4 py-8 gap-6 md:h-screen my-12 md:my-0">
       {/* Left Section */}
       <div className="flex flex-col justify-center w-full md:w-1/2 space-y-4">
         <Image src="/oracode.png" alt="oracode logo" width={200} height={100} />

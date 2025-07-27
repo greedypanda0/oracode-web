@@ -43,7 +43,7 @@ export function Reviews() {
   return (
     <section
       id="reviews"
-      className="w-full min-h-screen py-16 flex flex-col items-center justify-center"
+      className="w-full md:h-screen md:py-16 flex flex-col items-center justify-center"
     >
       <div className="text-center max-w-2xl">
         <h1 className="text-2xl md:text-4xl font-bold mb-2">
@@ -55,7 +55,7 @@ export function Reviews() {
         </p>
       </div>
 
-      <div className="w-full flex flex-wrap justify-center gap-6 mt-12 px-4">
+      <div className="w-full flex flex-wrap justify-center gap-6 mt-12 px-2 md:px-4">
         {revs.map((item, index) => (
           <div
             key={index}

@@ -34,12 +34,12 @@ export default function DonationSection() {
           <div className="w-full bg-gray-200 rounded-full h-4 mb-4">
             <div
               className="bg-gradient-to-r from-green-400 to-green-600 h-4 rounded-full transition-all duration-1000 ease-out"
-              style={{ width: "20%" }}
+              style={{ width: "0%" }}
             ></div>
           </div>
           <p className="text-muted-foreground">
-            <span className="font-semibold text-green-600">₹1,00,000</span>
-            {" "}raised • <span className="font-semibold">₹4,00,000</span> remaining
+            <span className="font-semibold text-green-600">₹0</span>
+            {" "}raised • <span className="font-semibold">₹5,00,000</span> remaining
           </p>
         </div>
 

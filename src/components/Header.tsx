@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import { Menu, X, Sun, Moon, Download, ChevronDown, Heart } from "lucide-react";
+import Link from "next/link";
 import SignInModal from "./SignInModal";
 
 export default function Header() {
@@ -34,8 +35,8 @@ export default function Header() {
   ];
 
   const navigation = [
-    { name: "Home", href: "#" },
-    { name: "Tutorials", href: "#tutorials" },
+    { name: "Home", href: "/" },
+    { name: "Tutorials", href: "#" },
     {
       name: "Community",
       href: "#community",
@@ -55,7 +56,7 @@ export default function Header() {
           <div className="flex justify-between items-center h-16">
             <div className="flex items-center">
               <a
-                href="#"
+                href="/"
                 className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
               >
                 Oracode
@@ -91,12 +92,12 @@ export default function Header() {
                       )}
                     </div>
                   ) : (
-                    <a
-                      href={item.href}
+                    <Link
                       className="text-foreground hover:text-primary transition-colors"
+                      href={item.href}
                     >
                       {item.name}
-                    </a>
+                    </Link>
                   )}
                 </div>
               ))}
@@ -142,10 +143,12 @@ export default function Header() {
               </div>
 
               {/* Donate Button */}
-              <button className="flex items-center px-4 py-2 bg-rose-500 text-white rounded-lg hover:bg-rose-600 transition-colors">
-                <Heart className="h-4 w-4 mr-2" />
-                Donate
-              </button>
+              <Link href="/donate">
+                <button className="flex items-center px-4 py-2 bg-rose-500 text-white rounded-lg hover:bg-rose-600 transition-colors">
+                  <Heart className="h-4 w-4 mr-2" />
+                  Donate
+                </button>
+              </Link>
 
               {/* Theme toggle */}
               <button

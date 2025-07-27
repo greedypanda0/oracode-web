@@ -5,7 +5,6 @@ import StartBuildingSection from '../components/StartBuildingSection';
 import FeaturedProjects from '../components/FeaturedProjects';
 import TestimonialsSection from '../components/TestimonialsSection';
 import PartnersSection from '../components/PartnersSection';
-import DonationSection from '../components/DonationSection';
 import Footer from '../components/Footer';
 
 export default function Home() {
@@ -18,7 +17,6 @@ export default function Home() {
       <FeaturedProjects/>
       <TestimonialsSection/>
       <PartnersSection/>
-      <DonationSection/>
       <Footer/>
     </main>
   );

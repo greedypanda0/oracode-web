@@ -59,7 +59,7 @@ export function Reviews() {
         {revs.map((item, index) => (
           <div
             key={index}
-            className="bg-card text-card-foreground rounded-xl shadow-md w-80 p-4 flex flex-col justify-between hover:-translate-y-2 transition-all duration-200"
+            className="border border-primary/70 text-card-foreground rounded-xl shadow-md w-90 p-4 flex flex-col justify-between hover:-translate-y-2 transition-all duration-200"
           >
             <p className="text-sm font-semibold mb-4 line-clamp-4 leading-relaxed">
               {item.text}

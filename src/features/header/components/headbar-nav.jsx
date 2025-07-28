@@ -4,6 +4,7 @@ import { cn } from "@/lib/utils";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
 import { Community } from "./headbar-community";
+import { Heart } from "lucide-react";
 
 const pages = [
   {
@@ -36,12 +37,12 @@ export function HeadbarNav({ className }) {
           key={idx}
           href={page.href}
           className={cn(
-            "text-sm text-foreground hover:text-primary border-white transition-all duration-100 font-semibold",
-            page.name === "donate" && "font-extrabold text-md"
+            "text-sm text-foreground hover:text-primary border-white transition-all duration-100 font-semibold flex gap-2 justify-center items-center",
+            page.name === "donate" && "font-extrabold text-md text-red-600"
           )}
           title={page.name}
         >
-          {t(page.name)}
+          {page.name === "donate" && <Heart size={15} />} {t(page.name)}
         </Link>
       ))}
     </nav>

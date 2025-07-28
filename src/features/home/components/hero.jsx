@@ -6,6 +6,7 @@ import { Download } from "lucide-react";
 
 export function Hero() {
   const t = useTranslations("hero");
+  const tt = useTranslations("header");
 
   return (
     <section className="w-full flex flex-col md:flex-row px-2 md:px-4 py-8 gap-6 md:h-screen my-12 md:my-0">
@@ -19,7 +20,7 @@ export function Hero() {
           {t("description")}
         </p>
         <Button className="md:w-fit" size="lg">
-          <Download /> Download App
+          <Download /> {tt("download")}
         </Button>
       </div>
 

@@ -1,6 +1,11 @@
+"use client";
+
 import { Code } from "lucide-react";
+import { useTranslations } from "next-intl";
 
 export function Mission() {
+  const t = useTranslations("mission");
+
   return (
     <section
       id="mission"
@@ -8,27 +13,20 @@ export function Mission() {
     >
       {/* Left section  */}
       <div className="w-full md:w-1/2 flex flex-col gap-2">
-        <h1 className="text-md md:text-3xl font-bold">
-          Empowering the Next Generation of Coders
-        </h1>
+        <h1 className="text-md md:text-3xl font-bold">{t("title")}</h1>
         <p className="text-sm md:text-xl font-semibold text-primary leading-relaxed">
-          At Oracode, we believe that coding is more than just writing
-          instructions for computers. It's about developing logical thinking,
-          creativity, and problem-solving skills that shape young minds for the
-          future.
+          {t("description")}
         </p>
       </div>
 
       {/* Right section  */}
       <div className="w-full md:w-1/2 flex justify-center items-center flex-col gap-2">
-        <div className="bg-primary p-6 rounded-full">
+        <div className="bg-primary p-6 rounded-full hover:animate-spin">
           <Code size={50} />
         </div>
-        <h1 className="text-xl md:text-3xl font-extrabold">
-          Learn. Code. Build.
-        </h1>
+        <h1 className="text-xl md:text-3xl font-extrabold">{t("t1")}</h1>
         <p className="text-sm md:text-xl leading-relaxed text-center">
-          Join thousands of young coders on their journey to digital literacy
+          {t("d2")}
         </p>
       </div>
     </section>

@@ -2,19 +2,86 @@
   "home": {
     "title": "Hello world!"
   },
-  "mission": {
-    "title": "🧭 Our Mission",
-    "description": "Empower every child, regardless of background, with the power to think, build, and choose ethically — through accessible, multilingual tech education that works anywhere, anytime."
-  },
   "hero": {
     "slogan": "Code that shapes minds, not just machines.",
     "description": "Oracode is an offline-first educational mobile app designed to teach underprivileged children the fundamentals of coding, systems, and ethics — all in multiple languages."
+  },
+  "mission": {
+    "title": "Empowering the Next Generation of Coders",
+    "description": "At Oracode, we believe that coding is more than just writing instructions for computers. It's about developing logical thinking, creativity, and problem-solving skills that shape young minds for the future.",
+    "t1": "Learn. Code. Build.",
+    "d2": "Join thousands of young coders on their journey to digital literacy"
+  },
+  "testimonial": {
+    "title": "What Our Students Say",
+    "description": "Hear from young coders who are already building amazing things with Oracode."
   },
   "header": {
     "tutorials": "Tutorials",
     "community": "Community",
     "work with us": "Work With Us",
     "donate": "Donate",
-    "vision": "Vision"
+    "vision": "Vision",
+    "download": "Download"
+  },
+  "auth": {
+    "signin": "Sign In",
+    "signout": "Sign Out"
+  },
+  "footer": {
+    "brand": {
+      "title": "Oracode",
+      "description": "Empowering the next generation of coders through interactive learning, community support, and hands-on projects. Code that shapes minds, not just machines."
+    },
+    "contact": {
+      "email": "hello@oracode.com",
+      "phone": "1212121212121",
+      "location": "Global • Remote First"
+    },
+    "social": {
+      "facebook": "Facebook",
+      "twitter": "Twitter",
+      "instagram": "Instagram",
+      "youtube": "YouTube",
+      "github": "GitHub"
+    },
+    "sections": {
+      "quickLinks": "Quick Links",
+      "community": "Community",
+      "aboutLegal": "About & Legal",
+      "legal": "Legal"
+    },
+    "links": {
+      "quick": {
+        "home": "Home",
+        "tutorials": "Tutorials",
+        "community": "Community",
+        "projects": "Projects"
+      },
+      "community": {
+        "leaderboard": "Leaderboard",
+        "forums": "Forums",
+        "student": "Student Projects",
+        "shoutouts": "Shoutouts"
+      },
+      "about": {
+        "vision": "Our Vision",
+        "work": "Work With Us",
+        "contact": "Contact Us",
+        "donate": "Donate"
+      },
+      "legal": {
+        "privacy": "Privacy Policy",
+        "terms": "Terms of Service",
+        "license": "License",
+        "conduct": "Code of Conduct"
+      }
+    },
+    "bottom": {
+      "copyright": "© 2025 Oracode. All rights reserved. Built with ❤️ for young coders worldwide.",
+      "openSource": "Open Source",
+      "license": "MIT License",
+      "tech": "tech stack will be updated here later k"
+    }
   }
 }

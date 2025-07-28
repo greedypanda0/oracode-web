@@ -1,6 +1,5 @@
 "use client";
 
-import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
   DropdownMenuTrigger,
@@ -10,14 +9,17 @@ import {
 } from "@/components/ui/dropdown-menu";
 
 import { Globe, MessageCircle, Github, LifeBuoy, ChevronDown } from "lucide-react";
+import { useTranslations } from "next-intl";
 import Link from "next/link";
 
 export function Community() {
+  const t = useTranslations("header")
+
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <p className="text-sm text-foreground font-semibold p-0 hover:text-primary flex flex-row gap-2 justify-center items-center">
-          Community <ChevronDown size={15} />
+          {t("community")} <ChevronDown size={15} />
         </p>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="start" className="w-56">

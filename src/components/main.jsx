@@ -1,5 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Headbar } from "../features/header/components/headbar";
+import Footer from "./footer";
 
 export function Main({ children, className }) {
   return (
@@ -13,6 +14,7 @@ export function Main({ children, className }) {
       >
         {children}
       </main>
+      <Footer />
     </>
   );
 }

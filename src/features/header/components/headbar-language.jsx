@@ -7,6 +7,7 @@ import {
   DropdownMenuContent,
   DropdownMenuItem,
 } from "@/components/ui/dropdown-menu";
+import { cn } from "@/lib/utils";
 import Cookies from "js-cookie";
 import { Globe } from "lucide-react";
 import { useLocale } from "next-intl";

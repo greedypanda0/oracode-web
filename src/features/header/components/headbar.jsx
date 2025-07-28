@@ -8,8 +8,12 @@ import { HeadbarMenu } from "./headbar-menu";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
 import { Download } from "lucide-react";
+import { AuthButton } from "./headbar-auth";
+import { useTranslations } from "next-intl";
 
 export function Headbar() {
+  const t = useTranslations("header")
+
   return (
     <motion.header
       initial={{ y: -50, opacity: 0 }}
@@ -24,7 +28,7 @@ export function Headbar() {
     >
       {/* Title  */}
       <div className={cn("text-[var(--primary-foreground)] font-bold text-lg")}>
-        <Link href="/">
+        <Link href="/" className="block w-[100px] h-auto">
           <Image src="/oracode.png" alt="oracode pfp" width={100} height={50} />
           {/* Oracode */}
         </Link>
@@ -37,12 +41,16 @@ export function Headbar() {
 
       {/* Buttons  */}
       <div className="flex flex-row items-center gap-2">
-        <LanguageChanger />
-        <HeadbarMenu />
-        <Button className="hidden md:flex">
-          <Download /> Download
-        </Button>
-        <Button className="hidden md:flex">Sign In</Button>
+        <div className="hidden md:flex gap-2">
+          <LanguageChanger />
+          <Button className="hidden md:flex gap-2">
+            <Download /> {t("download")}
+          </Button>
+          <AuthButton />
+        </div>
+        <div className="block md:hidden">
+          <HeadbarMenu />
+        </div>
       </div>
     </motion.header>
   );

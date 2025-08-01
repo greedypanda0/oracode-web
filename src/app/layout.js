@@ -15,7 +15,7 @@ export default async function RootLayout({ children }) {
 
   return (
     <html lang={locale} suppressHydrationWarning>
-      <body className={`${montserrat.className} antialiased`}>
+      <body suppressHydrationWarning  className={`${montserrat.className} antialiased`}>
         <IntlProvider locale={locale} messages={messages}>
           <ThemeProvider
             attribute="class"

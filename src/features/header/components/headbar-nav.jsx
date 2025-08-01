@@ -21,7 +21,7 @@ const pages = [
   },
   {
     name: "donate",
-    href: "/",
+    href: "/donate",
   },
 ];
 
